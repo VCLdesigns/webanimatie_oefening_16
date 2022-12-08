@@ -1,0 +1,151 @@
+#game {
+    position: relative;
+    width: 565px;
+    height: 419px;
+    background-color: #666;
+    margin: 0 auto;
+}
+
+#bodem {
+    position: absolute;
+    bottom: 0;
+    width: 566px;
+    height: 71px;
+    background-image: url(../img/bodem.png);
+}
+
+#spin {
+    position: absolute;
+    width: 141px;
+    height: 286px;
+    background-image: url(../img/spin.png);
+    bottom: 40px;
+    left: 212px;
+}
+
+/*-------*/
+
+.poot {
+    position: absolute;
+    background-image: url(../img/poot.png);
+    width: 38px;
+    height: 148px;
+    transform-origin: 19px 130px;
+    transition: transform 10s linear;
+}
+
+
+#poot1 {
+    left: 210px;
+    top: 75px;
+    transform: rotate(-30deg)
+}
+
+#poot2 {
+    left: 196px;
+    top: 104px;
+    transform: rotate(-45deg)
+}
+
+#poot3 {
+    left: 196px;
+    top: 135px;
+    transform: rotate(-90deg)
+}
+
+#poot4 {
+    left: 212px;
+    top: 160px;
+    transform: rotate(-120deg)
+}
+
+
+#poot5 {
+    right: 210px;
+    top: 75px;
+    transform: rotate(30deg)
+}
+
+#poot6 {
+    right: 196px;
+    top: 104px;
+    transform: rotate(45deg)
+}
+
+#poot7 {
+    right: 196px;
+    top: 135px;
+    transform: rotate(90deg)
+}
+
+#poot8 {
+    right: 212px;
+    top: 160px;
+    transform: rotate(120deg)
+}
+
+
+/*-------*/
+
+
+.palm {
+    position: absolute;
+    width: 107px;
+    height: 88px;
+    background-image: url(../img/palm.png);
+}
+
+#palm1 {
+    top: 20px;
+    left: 6px;
+}
+
+#palm2 {
+    top: 20px;
+    right: 6px;
+}
+
+
+/*-------*/
+
+
+.knop {
+    position: absolute;
+    width: 16px;
+    height: 74px;
+    background-color: #808080;
+    transition: all 0.2s linear;
+}
+.knop:hover{
+    cursor: pointer;
+}
+
+#knop1 {
+    left: 52px;
+    bottom: 55px;
+}
+
+#knop2 {
+    left: 52px;
+    bottom: 145px;
+}
+
+#knop3 {
+    left: 52px;
+    bottom: 236px;
+}
+
+#knop4 {
+    right: 52px;
+    bottom: 55px;
+}
+
+#knop5 {
+    right: 52px;
+    bottom: 145px;
+}
+
+#knop6 {
+    right: 52px;
+    bottom: 236px;
+}

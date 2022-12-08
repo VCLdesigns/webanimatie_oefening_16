@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Oef 16</title>
+    <link rel="stylesheet" href="style/oef16.css">
+</head>
+
+<body>
+
+    <div id="game">
+
+        <div id="bodem"> </div>
+
+        <div class="palm" id="palm1"></div>
+        <div class="palm" id="palm2"></div>
+
+        <div class="knop" id="knop1"></div>
+        <div class="knop" id="knop2"></div>
+        <div class="knop" id="knop3"></div>
+        <div class="knop" id="knop4"></div>
+        <div class="knop" id="knop5"></div>
+        <div class="knop" id="knop6"></div>
+
+        <div class="poot" id="poot1"></div>
+        <div class="poot" id="poot2"></div>
+        <div class="poot" id="poot3"></div>
+        <div class="poot" id="poot4"></div>
+        <div class="poot" id="poot5"></div>
+        <div class="poot" id="poot6"></div>
+        <div class="poot" id="poot7"></div>
+        <div class="poot" id="poot8"></div>
+
+
+        <div id="spin"></div>
+
+
+
+
+    </div>
+    <script>
+        var knoppen = document.querySelectorAll(".knop");
+        var poten = document.querySelectorAll(".poot");
+
+        var knop1 = false;
+        var knop3 = false;
+        var knop5 = false;
+
+        for (var i = 0; i < knoppen.length; i++) {
+            knoppen[i].addEventListener("click", dancingSpider);
+        }
+        function dancingSpider(evt) {
+            if (evt.currentTarget.getAttribute("id") == "knop1") {
+                knop1 = true;
+                evt.currentTarget.style.backgroundColor = "red";
+
+            } else if (evt.currentTarget.getAttribute("id") == "knop3") {
+                knop3 = true;
+                evt.currentTarget.style.backgroundColor = "red";
+
+            } else if (evt.currentTarget.getAttribute("id") == "knop5") {
+                knop5 = true;
+                evt.currentTarget.style.backgroundColor = "red";
+
+            } else {
+                for (var i = 0; i < knoppen.length; i++) {
+                    knoppen[i].style.backgroundColor = "#808080";
+
+                }
+                knop1 = false;
+                knop3 = false;
+                knop5 = false;
+
+            }
+            console.log(knop1, knop3, knop5)
+            if (knop1 == true && knop3 == true && knop5 == true) {
+                for (var i = 0; i < poten.length; i++) {
+                    var randomRotate = Math.random() * (1800 - 360) + 360;
+                    poten[i].style.transform = "rotate(" + randomRotate + "deg)"
+                }
+                knop1 = false;
+                knop3 = false;
+                knop5 = false;
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>
